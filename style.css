@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*Custom properties*/
+:root {
+  --spacer-small: 1rem;
+  --spacer-medium: 2rem;
+  --spacer-large: 3rem;
+
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2rem;
+  --font-size-xlarge: 3rem;
+}
+
 /*CSS RESET*/
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
 }
 
 /* 3. Enable keyword animations */
@@ -73,4 +82,36 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/*General styling*/
+
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+}
+
+.hero,
+.work,
+.contact {
+  padding: var(--spacer-small);
+}
+
+/**/
+.overlay {
+  max-width: 50rem;
+  display: grid;
+  justify-content: center;
+}
+
+.overlay img,
+.overlay h1 {
+  grid-area: 1 / 1;
+}
+
+.overlay h1 {
+  align-self: self-end;
+  justify-self: center;
+  color: white;
+  font-size: 2rem;
 }
