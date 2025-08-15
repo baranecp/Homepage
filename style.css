@@ -91,17 +91,41 @@ body {
   font-size: 1rem;
 }
 
-.hero,
-.work,
-.contact {
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-block: var(--spacer-small);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+section {
   padding: var(--spacer-small);
 }
 
-/**/
+/* hero section*/
 .overlay {
+  position: relative;
   max-width: 50rem;
   display: grid;
-  justify-content: center;
+  place-items: center;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(hsl(0 0% 0% / 0.2), hsl(0 0% 0% / 0.6));
+  z-index: 1;
 }
 
 .overlay img,
@@ -110,8 +134,30 @@ body {
 }
 
 .overlay h1 {
-  align-self: self-end;
-  justify-self: center;
+  z-index: 2;
+  text-align: center;
+  align-self: end;
+  justify-self: start;
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 300;
   color: white;
-  font-size: 2rem;
 }
+
+.hero {
+}
+
+.hero-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacer-small);
+  padding: 0;
+}
+
+.hero-item svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* My work section*/
