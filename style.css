@@ -109,10 +109,6 @@ li {
   list-style: none;
 }
 
-section:not(.contact) {
-  padding: var(--spacer-small);
-}
-
 .flex {
   display: flex;
   align-items: center;
@@ -171,7 +167,8 @@ section:not(.contact) {
   padding: 0;
 }
 
-.hero-item svg {
+.hero-item svg,
+.contact-item svg {
   width: 2rem;
   height: 2rem;
 }
@@ -180,6 +177,7 @@ section:not(.contact) {
 
 .work {
   background-color: hsl(0, 0%, 98%);
+  margin-bottom: 1rem;
 }
 
 .work-items {
@@ -208,4 +206,27 @@ section:not(.contact) {
 .work-item svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+/*Contact*/
+.contact {
+  padding-top: 1rem;
+  background-color: rgb(74, 70, 211);
+}
+.contact h2 {
+  color: #fff;
+  margin: 0;
+}
+.contact-info {
+  padding: var(--spacer-small);
+}
+.contact-info p {
+  color: #fff;
+}
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacer-small);
+  padding: 0;
 }
