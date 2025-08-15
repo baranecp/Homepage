@@ -89,6 +89,7 @@ h6 {
 body {
   font-family: "Playfair Display", serif;
   font-size: 1rem;
+  margin: 0;
 }
 
 h2 {
@@ -108,11 +109,29 @@ li {
   list-style: none;
 }
 
-section {
+section:not(.contact) {
   padding: var(--spacer-small);
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--spacer-small);
+}
+
 /* hero section*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 50rem;
+}
+
 .overlay {
   position: relative;
   max-width: 50rem;
@@ -144,9 +163,6 @@ section {
   color: white;
 }
 
-.hero {
-}
-
 .hero-links {
   display: flex;
   align-items: center;
@@ -161,3 +177,35 @@ section {
 }
 
 /* My work section*/
+
+.work {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.work-items {
+  max-width: 75rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-content: center;
+  gap: var(--spacer-medium);
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.work-item p {
+  padding: var(--spacer-small);
+  margin: 0;
+}
+
+.work-item svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
